@@ -50,9 +50,9 @@ runReport() {
         genhtml coverage/lcov.info -o coverage --no-function-coverage -s -p `pwd`/coverage
         
 		if $IsWindows || $ENV:OS; then
-			start coverage/index.html
+			start coverage/html/index.html
 		else
-			open coverage/index.html
+			open coverage/html/index.html
 		fi
     fi
 }
